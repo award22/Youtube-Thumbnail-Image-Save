@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Thumbnail Downloader</title>
+</head>
+<body>
+    <h1>YouTube Thumbnail Downloader</h1>
+    <p>Enter the YouTube video ID:</p>
+    <input type="text" id="videoIdInput" placeholder="Enter YouTube video ID">
+    <button onclick="getThumbnail()">Get Thumbnail</button>
+
+    <h2>Thumbnail:</h2>
+    <img id="thumbnailImage" src="" alt="Thumbnail will appear here">
+
+    <script>
+        function getThumbnail() {
+            var videoId = document.getElementById('videoIdInput').value;
+            var thumbnailUrl = 'https://img.youtube.com/vi/' + videoId + '/maxresdefault.jpg';
+            document.getElementById('thumbnailImage').src = thumbnailUrl;
+        }
+    </script>
+</body>
+</html>
